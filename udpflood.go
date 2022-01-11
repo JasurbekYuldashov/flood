@@ -16,12 +16,13 @@ var (
 func main() {
 	flag.Parse()
 
-	fullAddr := fmt.Sprintf("%s:%v", *_host, *_port)
+	fullAddr := fmt.Sprintf("https://student.adu.uz/")
+	// fullAddr := fmt.Sprintf("%s:%v", *_host, *_port)
 	//Create send buffer
 	buf := make([]byte, *_size)
 
 	//Establish udp
-	conn, err := net.Dial("udp", fullAddr)
+	conn, err := net.Dial("udp", "https://student.adu.uz/")
 	if err != nil {
 		fmt.Println(err)
 	} else {
